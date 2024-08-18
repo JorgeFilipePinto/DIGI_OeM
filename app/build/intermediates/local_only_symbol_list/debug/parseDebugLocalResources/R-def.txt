@@ -51,7 +51,7 @@ string app_name
 string no_site_code_found
 string no_sms_found
 string no_team_code_found
-string sms_box_text_default
+string ongoing_comment
 string sms_created
 string sms_founded
 string trouble_fix

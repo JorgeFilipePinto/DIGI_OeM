@@ -3990,6 +3990,7 @@ int string mtrl_timepicker_confirm 0x7f0f009a
 int string no_site_code_found 0x7f0f009b
 int string no_sms_found 0x7f0f009c
 int string no_team_code_found 0x7f0f009d
+int string ongoing_comment 0x7f0f00b0
 int string password_toggle_content_description 0x7f0f009e
 int string path_password_eye 0x7f0f009f
 int string path_password_eye_mask_strike_through 0x7f0f00a0
@@ -4001,7 +4002,6 @@ int string searchview_clear_text_content_description 0x7f0f00a5
 int string searchview_navigation_content_description 0x7f0f00a6
 int string side_sheet_accessibility_pane_title 0x7f0f00a7
 int string side_sheet_behavior 0x7f0f00a8
-int string sms_box_text_default 0x7f0f00a9
 int string sms_created 0x7f0f00aa
 int string sms_founded 0x7f0f00ab
 int string status_bar_notification_info_overflow 0x7f0f00ac

@@ -6,11 +6,11 @@
     <string name="no_site_code_found">Não inseriu nenhum site!</string>
     <string name="no_sms_found">Nenhum SMS foi gerado!</string>
     <string name="no_team_code_found">Não inseriu nenhuma equipa!</string>
-    <string name="sms_box_text_default">A menssagem gerada será apresentada aqui.</string>
+    <string name="ongoing_comment">\nComment: </string>
     <string name="sms_created">SMS criado com sucesso.</string>
     <string name="sms_founded">SMS copiado com sucesso.</string>
     <string name="trouble_fix">\nFixes made: </string>
-    <string name="trouble_found">\nProblemas encontrados: </string>
+    <string name="trouble_found">\nTrouble founded: </string>
     <string name="trouble_to_fix">\nFixes to be made/= </string>
     <style name="Base.Theme.DIGI" parent="Theme.Material3.DayNight.NoActionBar">
         

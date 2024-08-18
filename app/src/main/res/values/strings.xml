@@ -6,10 +6,10 @@
     <string name="no_sms_found">Nenhum SMS foi gerado!</string>
     <string name="sms_founded">SMS copiado com sucesso.</string>
 
-    <string name="trouble_found">\nProblemas encontrados: </string>
+    <string name="ongoing_comment">\nComment: </string>
+    <string name="trouble_found">\nTrouble founded: </string>
     <string name="trouble_fix">\nFixes made: </string>
     <string name="trouble_to_fix">\nFixes to be made/= </string>
-    <string name="sms_box_text_default">A menssagem gerada será apresentada aqui.</string>
 
 
 </resources>
