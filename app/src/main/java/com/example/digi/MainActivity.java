@@ -19,14 +19,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    String txtSms, noTeam, noSiteCode, smsCreated, noSMS, okSms,radioTask, radioStatus, siteCode, teamCode;
+    String txtSms, noTeam, noSiteCode, smsCreated, noSMS, okSms, invalidSms,radioTask, radioStatus, siteCode, teamCode;
 
     Button clTeamCode, clSiteCode, clTroubleFounded, clTroubleFix, clTroubleNeedFix, generateSms, smsCopy;
-    ImageButton sendSMSWhatsapp;
+    ImageButton sendSMSWhatsapp, share;
     RadioGroup tasks, status;
     RadioButton siteDown, integration, warehouse, noGw;
     RadioButton travelling, start, blocked, onGoing, finish;
-    LinearLayout ongoingComment, layoutFinish;
+    LinearLayout ongoingComment, layoutFinish, layoutSms;
     EditText teamCodeBox, siteCodeBox, ongoingTextComment,troubleFoundedBox, troubleFixBox, troubleNeedToFixBox, smsTextBox;
 
     boolean isSmsCreated = false, smsValid = false, warehouseIsSelected, onGoingIsSelected, finishIsSelected;
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         blocked = findViewById(R.id.radio_btn_blocked);
         onGoing = findViewById(R.id.radio_btn_ongoing);
         finish = findViewById(R.id.radio_btn_finish);
+        share = findViewById(R.id.btn_share);
 
         ongoingComment = findViewById(R.id.ongoing_comment);
         ongoingTextComment = findViewById(R.id.edit_text_ongoing_comment);
@@ -65,10 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         clTroubleFounded = findViewById(R.id.btn_trouble_founded_clear_main);
         clTroubleFix = findViewById(R.id.btn_trouble_fixed_clear_main);
         clTroubleNeedFix = findViewById(R.id.btn_trouble_need_fixed_clear_main);
+        layoutSms = findViewById(R.id.layoutsms);
         generateSms = findViewById(R.id.btn_generate_message);
         smsTextBox = findViewById(R.id.sms_text_box);
         sendSMSWhatsapp = findViewById(R.id.btn_whatsapp_send);
         smsCopy = findViewById(R.id.btn_sms_copy);
+        invalidSms = getString(R.string.invalid_sms);
 
         travelling.setOnClickListener(this);
         start.setOnClickListener(this);
@@ -98,42 +101,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             sms();
             if(smsValid)
             {
-                smsCopy.setVisibility(View.VISIBLE);
-                smsTextBox.setVisibility(View.VISIBLE);
+                layoutSms.setVisibility(view.VISIBLE);
             }
             else
             {
-                sendToast("Menssagem inválida", longDuration);
-                smsCopy.setVisibility(View.INVISIBLE);
-                smsTextBox.setVisibility(View.INVISIBLE);
+                sendToast(invalidSms, longDuration);
+                layoutSms.setVisibility(view.INVISIBLE);
             }
         });
 
         sendSMSWhatsapp.setOnClickListener(view -> {
-            if(tasks.getCheckedRadioButtonId() == R.id.radio_btn_warehouse)
+            if(smsValid)
             {
                 WhatsAppSend(txtSms);
             }
             else
             {
-                if (!teamCodeBox.getText().toString().isEmpty() || !siteCodeBox.getText().toString().isEmpty() || !isSmsCreated)
-                {
-                    WhatsAppSend(txtSms);
-                }
-                else
-                {
-                    sendToast(noSMS, longDuration);
-                }
+                sendToast(noSMS, shortDuration);
             }
         });
 
         smsCopy.setOnClickListener(view -> {
-            smsCopied();
+            if(smsValid)
+            {
+                smsCopied(smsTextBox.getText().toString());
+            }
+            else
+            {
+                sendToast(noSMS, shortDuration);
+            }
+
         });
     }
 
     void StartApp()
     {
+        DisableElments();
         radioTask = "_SITE_DOWN";
         radioStatus = "_TRAVELLING";
         layoutFinish.setVisibility(View.GONE);
@@ -146,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     {
         decodeTasks(view.getId());
         decodeStatus(view.getId());
-        if(view.getId() == finish.getId())
+        if(view.getId() == finish.getId() && !warehouseIsSelected)
         {
             layoutFinish.setVisibility(View.VISIBLE);
         }
@@ -226,12 +229,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    void ClearBoxes(){
-        troubleFoundedBox.setText("");
-        troubleFixBox.setText("");
-        troubleNeedToFixBox.setText("");
-    }
-
     void sendToast(String text, int duration)
     {
         Toast.makeText(this, text, duration).show();
@@ -243,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!teamCodeBox.getText().toString().isEmpty())
         {
             teamCheck = true;
-            teamCode = teamCodeBox.getText().toString().toUpperCase() + "_";
+            teamCode = teamCodeBox.getText().toString().toUpperCase();
         }
         return teamCheck;
     }
@@ -254,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(!siteCodeBox.getText().toString().isEmpty())
         {
             siteCheck = true;
-            siteCode = siteCodeBox.getText().toString().toUpperCase();
+            siteCode = "_" + siteCodeBox.getText().toString().toUpperCase();
         }
         return siteCheck;
     }
@@ -281,24 +278,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(!ongoingTextComment.getText().toString().isEmpty())
         {
-            strOnGoing = getString(R.string.ongoing_comment) + ongoingTextComment.getText().toString();
+            strOnGoing = getString(R.string.ongoing_comment) + " " + ongoingTextComment.getText().toString();
         }
 
         if(!troubleFoundedBox.getText().toString().isEmpty())
         {
-            strTroubleFind = getString(R.string.trouble_found) + troubleFoundedBox.getText().toString();
+            strTroubleFind = getString(R.string.trouble_found) + " " + troubleFoundedBox.getText().toString();
             strFinish += strTroubleFind;
         }
 
         if(!troubleFixBox.getText().toString().isEmpty())
         {
-            strTroubleFix = getString(R.string.trouble_fix) + troubleFixBox.getText().toString();
+            strTroubleFix = getString(R.string.trouble_fix) + " " + troubleFixBox.getText().toString();
             strFinish += strTroubleFix;
         }
 
         if(!troubleNeedToFixBox.getText().toString().isEmpty())
         {
-            strTroubleNeedFix = getString(R.string.trouble_to_fix) + troubleNeedToFixBox.getText().toString();
+            strTroubleNeedFix = getString(R.string.trouble_to_fix) + " " + troubleNeedToFixBox.getText().toString();
             strFinish += strTroubleNeedFix;
         }
 
@@ -378,17 +375,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(sendWhatsapp);
     }
 
-    void smsCopied()
+    void smsCopied(String sms)
     {
-        String outputText = smsTextBox.getText().toString();
-        if (outputText.isEmpty()) {
-            sendToast(noSMS, shortDuration);
+        ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipData clipData = ClipData.newPlainText("SMS", sms);
+        clipboardManager.setPrimaryClip(clipData);
+        sendToast(okSms, shortDuration);
+    }
 
-        }else{
-            ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-            ClipData clipData = ClipData.newPlainText("SMS", outputText);
-            clipboardManager.setPrimaryClip(clipData);
-            sendToast(okSms, shortDuration);
-        }
+    void ClearBoxes(){
+        troubleFoundedBox.setText("");
+        troubleFixBox.setText("");
+        troubleNeedToFixBox.setText("");
+    }
+
+    void DisableElments()
+    {
+        share.setVisibility(View.INVISIBLE);
     }
 }

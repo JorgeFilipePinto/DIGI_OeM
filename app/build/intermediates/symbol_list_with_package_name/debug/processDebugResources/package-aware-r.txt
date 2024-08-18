@@ -3200,6 +3200,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_generate_message
+id btn_share
 id btn_site_code_clear_main
 id btn_sms_copy
 id btn_team_code_clear_main
@@ -3347,6 +3348,7 @@ id jumpToStart
 id labeled
 id layout
 id layout_finish
+id layoutsms
 id left
 id leftToRight
 id legacy
@@ -3887,6 +3889,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string invalid_sms
 string item_view_role_description
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium

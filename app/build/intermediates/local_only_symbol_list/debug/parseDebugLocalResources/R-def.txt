@@ -10,6 +10,7 @@ drawable ic_launcher_foreground
 drawable share
 drawable whatsapp_icon
 id btn_generate_message
+id btn_share
 id btn_site_code_clear_main
 id btn_sms_copy
 id btn_team_code_clear_main
@@ -22,6 +23,7 @@ id imageButton2
 id imageButton4
 id imageView
 id layout_finish
+id layoutsms
 id main
 id ongoing_comment
 id radio_btn_blocked
@@ -48,6 +50,7 @@ layout settings
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string invalid_sms
 string no_site_code_found
 string no_sms_found
 string no_team_code_found

@@ -165,9 +165,8 @@
                     android:layout_width="250dp"
                     android:layout_height="100dp"
                     android:layout_marginStart="70dp"
-                    android:textAlignment="center"
-                    android:hint="Comentário">
-                </EditText>
+                    android:hint="Comentário"
+                    android:textAlignment="center"></EditText>
 
             </LinearLayout>
 
@@ -188,6 +187,14 @@
                         android:inputType="textMultiLine"
                         android:textAlignment="center" />
 
+                    <Button
+                        android:id="@+id/btn_trouble_founded_clear_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="150dp"
+                        android:text="Limpar" />
+
                     <EditText
                         android:id="@+id/text_box_trouble_fixed"
                         android:layout_width="250dp"
@@ -198,6 +205,14 @@
                         android:hint="Problemas resolvidos"
                         android:inputType="textMultiLine"
                         android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/btn_trouble_fixed_clear_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="150dp"
+                        android:text="Limpar" />
 
                     <EditText
                         android:id="@+id/text_box_trouble_need_fixed"
@@ -210,34 +225,13 @@
                         android:inputType="textMultiLine"
                         android:textAlignment="center" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
-
-                    <Button
-                        android:id="@+id/btn_trouble_founded_clear_main"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="60dp"
-                        android:text="Limpar" />
-
-                    <Button
-                        android:id="@+id/btn_trouble_fixed_clear_main"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="120dp"
-                        android:text="Limpar" />
-
                     <Button
                         android:id="@+id/btn_trouble_need_fixed_clear_main"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="120dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="150dp"
                         android:text="Limpar" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
@@ -253,7 +247,7 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/btn_share"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="40dp"
@@ -270,27 +264,36 @@
                         android:id="@+id/btn_whatsapp_send"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:layout_marginStart="60dp"
+                        android:layout_marginStart="40dp"
                         app:srcCompat="@drawable/whatsapp_icon" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/layoutsms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="invisible">
             <EditText
                 android:id="@+id/sms_text_box"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:visibility="invisible"/>
+                android:textSize="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"/>
+
             <Button
                 android:id="@+id/btn_sms_copy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="150dp"
-                android:visibility="invisible"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
                 android:text="Copiar" />
 
+        </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

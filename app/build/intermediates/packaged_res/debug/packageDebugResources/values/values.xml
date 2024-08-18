@@ -2,7 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <string name="app_name">DIGI</string>
+    <string name="app_name">DIGI OeM</string>
+    <string name="invalid_sms">Menssagem inválida</string>
     <string name="no_site_code_found">Não inseriu nenhum site!</string>
     <string name="no_sms_found">Nenhum SMS foi gerado!</string>
     <string name="no_team_code_found">Não inseriu nenhuma equipa!</string>
