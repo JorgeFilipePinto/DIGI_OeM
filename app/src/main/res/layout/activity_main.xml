@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/digi_label_vec" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/text_box_team_code_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Código de Equipa"
+                    android:text="FLD05"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/btn_team_code_clear_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="Limpar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/text_box_site_code_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:hint="Código do Site"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/btn_site_code_clear_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="Limpar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/radio_group_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:checkedButton="@id/radio_btn_site_down">
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_site_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Site Down" />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_integration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Integration " />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_warehouse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Warehouse" />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_non_gw_gw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Non GW->GW" />
+
+                </RadioGroup>
+
+
+                <RadioGroup
+                    android:id="@+id/radio_group_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="16dp"
+                    android:checkedButton="@id/radio_btn_travelling">
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_travelling"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Travelling" />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_start"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Start" />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_blocked"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Blocked" />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_ongoing"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="On going" />
+
+                    <RadioButton
+                        android:id="@+id/radio_btn_finish"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Finish" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ongoing_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_text_ongoing_comment"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="70dp"
+                    android:textAlignment="center"
+                    android:hint="Comentário">
+                </EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/text_box_trouble_founded_main"
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:hint="Problemas encontrados"
+                        android:inputType="textMultiLine"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/text_box_trouble_fixed"
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:hint="Problemas resolvidos"
+                        android:inputType="textMultiLine"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/text_box_trouble_need_fixed"
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="10dp"
+                        android:ems="10"
+                        android:hint="Problemas que ainda necessitam de ser resolvidos"
+                        android:inputType="textMultiLine"
+                        android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <Button
+                        android:id="@+id/btn_trouble_founded_clear_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="Limpar" />
+
+                    <Button
+                        android:id="@+id/btn_trouble_fixed_clear_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:text="Limpar" />
+
+                    <Button
+                        android:id="@+id/btn_trouble_need_fixed_clear_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="120dp"
+                        android:text="Limpar" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="40dp"
+                        android:background="@drawable/share" />
+
+                    <Button
+                        android:id="@+id/btn_generate_message"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:text="Criar SMS" />
+
+                    <ImageButton
+                        android:id="@+id/btn_whatsapp_send"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="60dp"
+                        app:srcCompat="@drawable/whatsapp_icon" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/sms_text_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"/>
+            <Button
+                android:id="@+id/btn_sms_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:visibility="invisible"
+                android:text="Copiar" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

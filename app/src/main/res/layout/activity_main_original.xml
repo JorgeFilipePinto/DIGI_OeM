@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/digi_label_vec" />
+
+    <EditText
+        android:id="@+id/text_box_site_code_main"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Código do Site"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btn_site_code_clear_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        app:layout_constraintBottom_toBottomOf="@+id/text_box_site_code_main"
+        app:layout_constraintStart_toEndOf="@+id/text_box_site_code_main"
+        app:layout_constraintTop_toTopOf="@+id/text_box_site_code_main"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@id/radio_btn_travelling"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_box_site_code_main">
+
+        <RadioButton
+            android:id="@+id/radio_btn_travelling"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:text="Travelling" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_start"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:text="Start" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_blocked"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:text="Blocked" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_ongoing"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:text="On going" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_finish"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:text="Finish" />
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/radio_group_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@id/radio_btn_site_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_box_site_code_main">
+
+        <RadioButton
+            android:id="@+id/radio_btn_site_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Site Down" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_integration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Integration " />
+
+        <RadioButton
+            android:id="@+id/radio_btn_warehouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warehouse" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_non_gw_gw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non GW->GW" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/layout_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_status">
+
+        <EditText
+            android:id="@+id/text_box_trouble_founded_main"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:hint="Problemas encontrados"
+            android:inputType="textMultiLine"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn_trouble_founded_clear_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="100dp"
+            android:text="Limpar" />
+
+        <EditText
+            android:id="@+id/text_box_trouble_fixed"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:hint="Problemas resolvidos"
+            android:inputType="textMultiLine"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn_trouble_fixed_clear_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="100dp"
+            android:text="Limpar" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_generate_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar SMS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_task"
+        app:layout_constraintVertical_bias="0.90999997" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_generate_message"
+        app:layout_constraintEnd_toStartOf="@+id/btn_generate_message"
+        app:layout_constraintTop_toTopOf="@+id/btn_generate_message" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_generate_message"
+        app:layout_constraintStart_toEndOf="@+id/btn_generate_message"
+        app:layout_constraintTop_toTopOf="@+id/btn_generate_message"
+        app:srcCompat="@drawable/whatsapp_icon" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Menssagem"
+        app:layout_constraintBottom_toTopOf="@+id/btn_generate_message"
+        app:layout_constraintEnd_toEndOf="@+id/layout_finish"
+        app:layout_constraintStart_toStartOf="@+id/layout_finish" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
