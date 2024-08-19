@@ -3200,6 +3200,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btn_generate_message
+id btn_share
 id btn_site_code_clear_main
 id btn_sms_copy
 id btn_team_code_clear_main
@@ -3347,6 +3348,7 @@ id jumpToStart
 id labeled
 id layout
 id layout_finish
+id layoutsms
 id left
 id leftToRight
 id legacy
@@ -3887,6 +3889,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string invalid_sms
 string item_view_role_description
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
@@ -3991,6 +3994,7 @@ string mtrl_timepicker_confirm
 string no_site_code_found
 string no_sms_found
 string no_team_code_found
+string ongoing_comment
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -4002,7 +4006,6 @@ string searchview_clear_text_content_description
 string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
-string sms_box_text_default
 string sms_created
 string sms_founded
 string status_bar_notification_info_overflow
