@@ -1,5 +1,6 @@
 # DIGI App O & M
-### <span style="color:red">The APP Itsn't official DIGI APP, I'm just help my friends and learnning about Android programming.</p>
+### <span style="color:red">The APP It is not official DIGI APP.
+### I am just helping my friends and learnning about Android programming.
 
 ![Carregando...](readmeFiles/digi_logo.jpeg)
 ## Objective
