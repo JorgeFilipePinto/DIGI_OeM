@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">DIGI OeM</string>
+    <string name="invalid_sms">Menssagem inválida</string>
+    <string name="no_site_code_found">Não inseriu nenhum site!</string>
+    <string name="no_sms_found">Nenhum SMS foi gerado!</string>
+    <string name="no_team_code_found">Não inseriu nenhuma equipa!</string>
+    <string name="ongoing_comment">\nCommentário: </string>
+    <string name="sms_created">SMS criado com sucesso.</string>
+    <string name="sms_founded">SMS copiado com sucesso.</string>
+    <string name="trouble_fix">\nCorreções feitas: </string>
+    <string name="trouble_found">\nProblemas encontrados: </string>
+    <string name="trouble_to_fix">\nCorreções a serem feitas/= </string>
+    <style name="Base.Theme.DIGI" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.DIGI" parent="Base.Theme.DIGI"/>
+</resources>
