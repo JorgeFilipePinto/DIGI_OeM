@@ -3500,6 +3500,7 @@ int id rounded 0x7f080189
 int id row_index_key 0x7f08018a
 int id save_non_transition_alpha 0x7f08018b
 int id save_overlay_view 0x7f08018c
+int id save_settings 0x7f080219
 int id sawtooth 0x7f08018d
 int id scale 0x7f08018e
 int id screen 0x7f08018f
@@ -3521,6 +3522,10 @@ int id search_voice_btn 0x7f08019e
 int id select_dialog_listview 0x7f08019f
 int id selected 0x7f0801a0
 int id selection_type 0x7f0801a1
+int id setting1 0x7f08021a
+int id setting2 0x7f08021b
+int id setting3 0x7f08021c
+int id setting4 0x7f08021d
 int id settings_button 0x7f080217
 int id sharedValueSet 0x7f0801a2
 int id sharedValueUnset 0x7f0801a3

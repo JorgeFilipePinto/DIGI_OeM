@@ -3501,6 +3501,7 @@ id rounded
 id row_index_key
 id save_non_transition_alpha
 id save_overlay_view
+id save_settings
 id sawtooth
 id scale
 id screen
@@ -3522,6 +3523,10 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id setting1
+id setting2
+id setting3
+id setting4
 id settings_button
 id sharedValueSet
 id sharedValueUnset

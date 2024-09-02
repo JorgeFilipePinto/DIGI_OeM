@@ -40,6 +40,11 @@ id radio_btn_travelling
 id radio_btn_warehouse
 id radio_group_status
 id radio_group_task
+id save_settings
+id setting1
+id setting2
+id setting3
+id setting4
 id settings_button
 id sms_text_box
 id textView

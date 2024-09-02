@@ -32,6 +32,7 @@
     </TextView>
 
     <EditText
+        android:id="@+id/setting1"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:hint="text1"
@@ -42,6 +43,7 @@
     </EditText>
 
     <EditText
+        android:id="@+id/setting2"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:hint="text2"
@@ -52,6 +54,7 @@
     </EditText>
 
     <EditText
+        android:id="@+id/setting3"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:hint="text3"
@@ -62,6 +65,7 @@
     </EditText>
 
     <EditText
+        android:id="@+id/setting4"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:hint="text4"
@@ -72,6 +76,7 @@
     </EditText>
 
     <Button
+        android:id="@+id/save_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Save"
