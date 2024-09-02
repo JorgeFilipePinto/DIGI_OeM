@@ -34,3 +34,9 @@ There is no information related to field teams or company for security reasons.
 
 * Share Button
 
+
+## Future Features
+
+* QR Code Read and storage data
+* Local storage
+* Send Pictures with WhatsApp
