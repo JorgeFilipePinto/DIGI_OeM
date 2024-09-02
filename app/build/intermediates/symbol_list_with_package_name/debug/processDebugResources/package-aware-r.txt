@@ -2987,6 +2987,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_chevron_left_24
+drawable baseline_settings_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3324,6 +3326,7 @@ id hide_ime_id
 id hideable
 id home
 id homeAsUp
+id home_button
 id honorRequest
 id horizontal_only
 id icon
@@ -3519,6 +3522,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id settings_button
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3752,6 +3756,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_main_original
+layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

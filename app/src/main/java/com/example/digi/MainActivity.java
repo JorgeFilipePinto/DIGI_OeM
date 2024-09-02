@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String txtSms, noTeam, noSiteCode, smsCreated, noSMS, okSms, invalidSms,radioTask, radioStatus, siteCode, teamCode;
 
     Button clTeamCode, clSiteCode, clTroubleFounded, clTroubleFix, clTroubleNeedFix, generateSms, smsCopy;
-    ImageButton sendSMSWhatsapp, share;
+    ImageButton settings, sendSMSWhatsapp, share;
     RadioGroup tasks, status;
     RadioButton siteDown, integration, warehouse, noGw;
     RadioButton travelling, start, blocked, onGoing, finish;
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        settings = findViewById(R.id.settings_button);
         teamCodeBox = findViewById(R.id.text_box_team_code_main);
         clTeamCode = findViewById(R.id.btn_team_code_clear_main);
         siteCodeBox = findViewById(R.id.text_box_site_code_main);
@@ -96,6 +97,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         clTroubleNeedFix.setOnClickListener(v -> troubleNeedToFixBox.setText(""));
 
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent settingsChange = new Intent(MainActivity.this, Settings.class);
+                startActivity(settingsChange);
+            }
+        });
 
         generateSms.setOnClickListener(view -> {
             sms();

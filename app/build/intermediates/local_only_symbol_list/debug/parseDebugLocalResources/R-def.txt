@@ -2,6 +2,8 @@ R_DEF: Internal format may change without notice
 local
 color black
 color white
+drawable baseline_chevron_left_24
+drawable baseline_settings_24
 drawable digi_label
 drawable digi_label_vec
 drawable digi_logo
@@ -19,6 +21,7 @@ id btn_trouble_founded_clear_main
 id btn_trouble_need_fixed_clear_main
 id btn_whatsapp_send
 id edit_text_ongoing_comment
+id home_button
 id imageButton2
 id imageButton4
 id imageView
@@ -37,6 +40,7 @@ id radio_btn_travelling
 id radio_btn_warehouse
 id radio_group_status
 id radio_group_task
+id settings_button
 id sms_text_box
 id textView
 id text_box_site_code_main
@@ -46,6 +50,7 @@ id text_box_trouble_founded_main
 id text_box_trouble_need_fixed
 layout activity_main
 layout activity_main_original
+layout activity_settings
 layout settings
 mipmap ic_launcher
 mipmap ic_launcher_round
