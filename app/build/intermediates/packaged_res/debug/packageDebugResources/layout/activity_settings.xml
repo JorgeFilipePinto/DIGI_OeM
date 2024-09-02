@@ -19,4 +19,66 @@
         app:layout_constraintLeft_toLeftOf="parent">
     </ImageButton>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="100dp"
+        app:layout_constraintLeft_toLeftOf="@id/home_button"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:hint="text1"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </EditText>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:hint="text2"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </EditText>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:hint="text3"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </EditText>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:hint="text4"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="400dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </Button>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

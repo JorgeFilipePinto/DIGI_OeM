@@ -16,10 +16,6 @@
         "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.7\\com.example.digi.app-main-33:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.digi.app-debug-31:/drawable_baseline_chevron_left_24.xml.flat",
-        "source": "com.example.digi.app-main-33:/drawable/baseline_chevron_left_24.xml"
-    },
-    {
         "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.7\\com.example.digi.app-debug-31:\\drawable-ldpi_whatsapp_icon.png.flat",
         "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.7\\com.example.digi.app-pngs-27:\\drawable-ldpi\\whatsapp_icon.png"
     },
@@ -42,6 +38,10 @@
     {
         "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.7\\com.example.digi.app-debug-31:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.7\\com.example.digi.app-main-33:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.7\\com.example.digi.app-debug-31:\\drawable_baseline_chevron_left_24.xml.flat",
+        "source": "C:\\Users\\jorge\\.gradle\\daemon\\8.7\\com.example.digi.app-main-33:\\drawable\\baseline_chevron_left_24.xml"
     },
     {
         "merged": "C:\\Users\\jorge\\.gradle\\daemon\\8.7\\com.example.digi.app-debug-31:\\drawable_digi_label.png.flat",
