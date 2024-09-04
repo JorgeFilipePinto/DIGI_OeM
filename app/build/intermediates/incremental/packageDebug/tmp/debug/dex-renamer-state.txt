@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#Sun Aug 18 17:39:44 WEST 2024
-=======
-#Sun Aug 18 19:44:13 WEST 2024
->>>>>>> readmEdit
+#Wed Sep 04 12:27:55 WEST 2024
 base.0=C\:\\Users\\jorge\\AndroidStudioProjects\\DIGI\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\jorge\\AndroidStudioProjects\\DIGI\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\jorge\\AndroidStudioProjects\\DIGI\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
