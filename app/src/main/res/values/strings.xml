@@ -10,7 +10,6 @@
     <string name="ongoing_comment">\nCommentário: </string>
     <string name="trouble_found">\nProblemas encontrados: </string>
     <string name="trouble_fix">\nCorreções feitas: </string>
-    <string name="trouble_to_fix">\nCorreções a serem feitas/= </string>
-
+    <string name="trouble_to_fix">\nCorreções a serem feitas /= </string>
 
 </resources>
