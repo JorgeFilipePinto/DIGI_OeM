@@ -231,6 +231,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void sendToast(String text, int duration)
     {
+
         Toast.makeText(this, text, duration).show();
     }
 
