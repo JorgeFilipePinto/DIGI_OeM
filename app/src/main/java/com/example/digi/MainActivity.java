@@ -17,9 +17,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    String txtSms, noTeam, noSiteCode, smsCreated, noSMS, okSms, invalidSms,radioTask, radioStatus, siteCode, teamCode;
+    String txtSms, noTeam, noSiteCode, smsCreated, noSMS, okSms, invalidSms, radioTask, radioStatus, siteCode, teamCode;
 
     Button clTeamCode, clSiteCode, clTroubleFounded, clTroubleFix, clTroubleNeedFix, generateSms, smsCopy;
     ImageButton settings, sendSMSWhatsapp, share;
@@ -27,11 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     RadioButton siteDown, integration, warehouse, noGw;
     RadioButton travelling, start, blocked, onGoing, finish;
     LinearLayout ongoingComment, layoutFinish, layoutSms;
-    EditText teamCodeBox, siteCodeBox, ongoingTextComment,troubleFoundedBox, troubleFixBox, troubleNeedToFixBox, smsTextBox;
+    EditText teamCodeBox, siteCodeBox, ongoingTextComment, troubleFoundedBox, troubleFixBox, troubleNeedToFixBox, smsTextBox;
 
     boolean isSmsCreated = false, smsValid = false, warehouseIsSelected, onGoingIsSelected, finishIsSelected;
     int shortDuration, longDuration;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         ongoingComment = findViewById(R.id.ongoing_comment);
         ongoingTextComment = findViewById(R.id.edit_text_ongoing_comment);
-        layoutFinish= findViewById(R.id.layout_finish);
+        layoutFinish = findViewById(R.id.layout_finish);
         troubleFoundedBox = findViewById(R.id.text_box_trouble_founded_main);
         troubleFixBox = findViewById(R.id.text_box_trouble_fixed);
         troubleNeedToFixBox = findViewById(R.id.text_box_trouble_need_fixed);
@@ -108,43 +107,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         generateSms.setOnClickListener(view -> {
             sms();
-            if(smsValid)
-            {
+            if (smsValid) {
                 layoutSms.setVisibility(view.VISIBLE);
-            }
-            else
-            {
+            } else {
                 sendToast(invalidSms, longDuration);
                 layoutSms.setVisibility(view.INVISIBLE);
             }
         });
 
         sendSMSWhatsapp.setOnClickListener(view -> {
-            if(smsValid)
-            {
+            if (smsValid) {
                 WhatsAppSend(txtSms);
-            }
-            else
-            {
+            } else {
                 sendToast(noSMS, shortDuration);
             }
         });
 
         smsCopy.setOnClickListener(view -> {
-            if(smsValid)
-            {
+            if (smsValid) {
                 smsCopied(smsTextBox.getText().toString());
-            }
-            else
-            {
+            } else {
                 sendToast(noSMS, shortDuration);
             }
 
         });
     }
 
-    void StartApp()
-    {
+    void StartApp() {
         DisableElments();
         radioTask = "_SITE_DOWN";
         radioStatus = "_TRAVELLING";
@@ -154,83 +143,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view)
-    {
+    public void onClick(View view) {
         decodeTasks(view.getId());
         decodeStatus(view.getId());
-        if(view.getId() == finish.getId() && !warehouseIsSelected)
-        {
+        if (view.getId() == finish.getId() && !warehouseIsSelected) {
             layoutFinish.setVisibility(View.VISIBLE);
-        }
-        else
-        {
+        } else {
             layoutFinish.setVisibility(View.GONE);
         }
 
-        if(view.getId() == onGoing.getId())
-        {
+        if (view.getId() == onGoing.getId()) {
             ongoingComment.setVisibility(View.VISIBLE);
-        }
-        else
-        {
+        } else {
             ongoingComment.setVisibility(View.GONE);
         }
     }
 
 
-
-    void decodeTasks(int task)
-    {
-        if(task == R.id.radio_btn_site_down)
-        {
+    void decodeTasks(int task) {
+        if (task == R.id.radio_btn_site_down) {
             radioTask = "_SITE_DOWN";
             warehouseIsSelected = false;
-        }
-        else if(task == R.id.radio_btn_integration)
-        {
+        } else if (task == R.id.radio_btn_integration) {
             radioTask = "_INTEGRATION";
             warehouseIsSelected = false;
-        }
-        else if(task == R.id.radio_btn_warehouse)
-        {
+        } else if (task == R.id.radio_btn_warehouse) {
             radioTask = "_WAREHOUSE";
             warehouseIsSelected = true;
-        }
-        else if(task == R.id.radio_btn_non_gw_gw)
-        {
+        } else if (task == R.id.radio_btn_non_gw_gw) {
             radioTask = "_NON_GW->GW";
             warehouseIsSelected = false;
         }
     }
 
-    void decodeStatus(int status)
-    {
-        if(status == R.id.radio_btn_travelling)
-        {
+    void decodeStatus(int status) {
+        if (status == R.id.radio_btn_travelling) {
             radioStatus = "_TRAVELLING";
             onGoingIsSelected = false;
             finishIsSelected = false;
-        }
-        else if(status == R.id.radio_btn_start)
-        {
+        } else if (status == R.id.radio_btn_start) {
             radioStatus = "_START";
             onGoingIsSelected = false;
             finishIsSelected = false;
-        }
-        else if(status == R.id.radio_btn_blocked)
-        {
+        } else if (status == R.id.radio_btn_blocked) {
             radioStatus = "_BLOCKED";
             onGoingIsSelected = false;
             finishIsSelected = false;
-        }
-        else if(status == R.id.radio_btn_ongoing)
-        {
+        } else if (status == R.id.radio_btn_ongoing) {
             radioStatus = "_ONGOING";
             onGoingIsSelected = true;
             finishIsSelected = false;
-        }
-        else if(status == R.id.radio_btn_finish)
-        {
+        } else if (status == R.id.radio_btn_finish) {
             radioStatus = "_FINISH";
             onGoingIsSelected = false;
             finishIsSelected = true;
@@ -238,36 +201,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    void sendToast(String text, int duration)
-    {
+    void sendToast(String text, int duration) {
 
         Toast.makeText(this, text, duration).show();
     }
 
-    boolean setTeam()
-    {
+    boolean setTeam() {
         boolean teamCheck = false;
-        if(!teamCodeBox.getText().toString().isEmpty())
-        {
+        if (!teamCodeBox.getText().toString().isEmpty()) {
             teamCheck = true;
             teamCode = teamCodeBox.getText().toString().toUpperCase();
         }
         return teamCheck;
     }
 
-    boolean setSiteCode()
-    {
+    boolean setSiteCode() {
         boolean siteCheck = false;
-        if(!siteCodeBox.getText().toString().isEmpty())
-        {
+        if (!siteCodeBox.getText().toString().isEmpty()) {
             siteCheck = true;
             siteCode = "_" + siteCodeBox.getText().toString().toUpperCase();
         }
         return siteCheck;
     }
 
-    void errorMessages()
-    {
+    void errorMessages() {
         noTeam = getString(R.string.no_team_code_found);
         noSiteCode = getString(R.string.no_site_code_found);
         smsCreated = getString(R.string.sms_created);
@@ -276,8 +233,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    void sms()
-    {
+    void sms() {
         setTeam();
         setSiteCode();
         String strOnGoing = "";
@@ -286,121 +242,99 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String strTroubleNeedFix = "";
         String strFinish = "";
 
-        if(!ongoingTextComment.getText().toString().isEmpty())
-        {
+        if (!ongoingTextComment.getText().toString().isEmpty()) {
             strOnGoing = getString(R.string.ongoing_comment) + " " + ongoingTextComment.getText().toString();
         }
 
-        if(!troubleFoundedBox.getText().toString().isEmpty())
-        {
+        if (!troubleFoundedBox.getText().toString().isEmpty()) {
             strTroubleFind = getString(R.string.trouble_found) + " " + troubleFoundedBox.getText().toString();
             strFinish += strTroubleFind;
         }
 
-        if(!troubleFixBox.getText().toString().isEmpty())
-        {
+        if (!troubleFixBox.getText().toString().isEmpty()) {
             strTroubleFix = getString(R.string.trouble_fix) + " " + troubleFixBox.getText().toString();
             strFinish += strTroubleFix;
         }
 
-        if(!troubleNeedToFixBox.getText().toString().isEmpty())
-        {
+        if (!troubleNeedToFixBox.getText().toString().isEmpty()) {
             strTroubleNeedFix = getString(R.string.trouble_to_fix) + " " + troubleNeedToFixBox.getText().toString();
             strFinish += strTroubleNeedFix;
         }
 
-        if(warehouseIsSelected)
-        {
-            if(setTeam()) {
+        if (warehouseIsSelected) {
+            if (setTeam()) {
                 txtSms = teamCode + radioTask + "_TRAVELLING";
                 smsTextBox.setText(txtSms);
                 smsValid = true;
-            }
-            else
-            {
+            } else {
                 smsValid = false;
                 sendToast(noTeam, longDuration);
             }
-        }
-        else if(onGoingIsSelected)
-        {
-            if(!warehouseIsSelected)
-            {
+        } else if (onGoingIsSelected) {
+            if (!warehouseIsSelected) {
                 txtSms = teamCode + siteCode + radioTask + radioStatus + strOnGoing;
                 smsTextBox.setText(txtSms);
                 smsValid = true;
-            }
-            else {
+            } else {
                 sendToast("Selecione outra tarefa", longDuration);
                 smsValid = false;
             }
-        }
-        else if(finishIsSelected)
-        {
-            if (!warehouseIsSelected)
-            {
+        } else if (finishIsSelected) {
+            if (!warehouseIsSelected) {
                 txtSms = teamCode + siteCode + radioTask + radioStatus + strFinish;
                 ClearBoxes();
                 smsTextBox.setText(txtSms);
                 smsValid = true;
-            }
-            else
-            {
+            } else {
                 sendToast("Selecione outra tarefa", longDuration);
                 smsValid = false;
             }
-        }
-        else
-            {
-                if(teamCodeBox.getText().toString().isEmpty())
-                {
-                    sendToast(noTeam, longDuration);
+        } else {
+            if (teamCodeBox.getText().toString().isEmpty()) {
+                sendToast(noTeam, longDuration);
+                smsValid = false;
+            } else {
+                if (siteCodeBox.getText().toString().isEmpty()) {
+                    sendToast(noSiteCode, longDuration);
                     smsValid = false;
+                } else {
+                    txtSms = teamCode + siteCode + radioTask + radioStatus;
+                    smsTextBox.setText(txtSms);
+                    smsValid = true;
                 }
-                else
-                {
-                    if(siteCodeBox.getText().toString().isEmpty())
-                    {
-                       sendToast(noSiteCode,longDuration);
-                        smsValid = false;
-                    }
-                    else
-                    {
-                        txtSms = teamCode + siteCode + radioTask + radioStatus;
-                        smsTextBox.setText(txtSms);
-                        smsValid = true;
-                    }
-                }
-
             }
+
+        }
     }
 
 
-    void WhatsAppSend(String sms)
-    {
-        Intent sendWhatsapp = new Intent();
+    void WhatsAppSend(String sms) {
+        /*Intent sendWhatsapp = new Intent();
         sendWhatsapp.putExtra(Intent.EXTRA_TEXT, sms);
         sendWhatsapp.setPackage("com.whatsapp");
         sendWhatsapp.setType("text/plain");
-        startActivity(sendWhatsapp);
+        startActivity(sendWhatsapp);*/
+
+        DataBase myDB = new DataBase(MainActivity.this);
+        myDB.addBook(teamCodeBox.getText().toString().trim(), siteCodeBox.getText().toString().trim());
     }
 
-    void smsCopied(String sms)
-    {
+    void smsCopied(String sms) {
         ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clipData = ClipData.newPlainText("SMS", sms);
         clipboardManager.setPrimaryClip(clipData);
         sendToast(okSms, shortDuration);
     }
 
-    void ClearBoxes(){
+    void ClearBoxes() {
         troubleFoundedBox.setText("");
         troubleFixBox.setText("");
         troubleNeedToFixBox.setText("");
     }
 
-    void DisableElments()
-    {
+    void DisableElments() {
         share.setVisibility(View.INVISIBLE);
     }
+
+
 }

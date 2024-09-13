@@ -12,11 +12,7 @@
     <string name="sms_founded">SMS copiado com sucesso.</string>
     <string name="trouble_fix">\nCorreções feitas: </string>
     <string name="trouble_found">\nProblemas encontrados: </string>
-<<<<<<< HEAD
     <string name="trouble_to_fix">\nCorreções a serem feitas /= </string>
-=======
-    <string name="trouble_to_fix">\nCorreções a serem feitas/= </string>
->>>>>>> intoScreen
     <style name="Base.Theme.DIGI" parent="Theme.Material3.DayNight.NoActionBar">
         
         
