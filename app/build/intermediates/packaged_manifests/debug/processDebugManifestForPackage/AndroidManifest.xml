@@ -27,6 +27,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DIGI" >
         <activity
+            android:name="com.example.digi.Settings"
+            android:exported="false" />
+        <activity
             android:name="com.example.digi.MainActivity"
             android:exported="true" >
             <intent-filter>

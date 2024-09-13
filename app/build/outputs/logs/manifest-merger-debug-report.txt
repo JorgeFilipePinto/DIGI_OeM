@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\jorge\.gradle\caches\transforms-4\f1753f668e20fc71efa1fdbd537fef03\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jorge\.gradle\caches\transforms-4\240feb6a4c564727fdb75a5be0ccfc97\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\jorge\.gradle\caches\transforms-4\638669c6e55e43e5758fcc305ae0865a\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
@@ -56,8 +56,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\jorge\.
 	xmlns:android
 		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:5:5-24:19
-INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:5:5-24:19
+ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:5:5-27:19
+INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:5:5-27:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\jorge\.gradle\caches\transforms-4\f1753f668e20fc71efa1fdbd537fef03\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\jorge\.gradle\caches\transforms-4\f1753f668e20fc71efa1fdbd537fef03\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jorge\.gradle\caches\transforms-4\240feb6a4c564727fdb75a5be0ccfc97\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -96,22 +96,28 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\jo
 		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:13:9-42
 	android:dataExtractionRules
 		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.digi.MainActivity
-ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:15:9-23:20
+activity#com.example.digi.Settings
+ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:15:9-17:40
 	android:exported
-		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:17:13-36
+		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:16:13-41
+		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:16:13-37
+activity#com.example.digi.MainActivity
+ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:18:9-26:20
+	android:exported
+		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:20:13-36
+	android:name
+		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:19:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:18:13-22:29
+ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:19:17-69
+ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:19:25-66
+		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:21:17-77
+ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:21:27-74
+		ADDED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml:24:27-74
 uses-sdk
 INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\jorge\AndroidStudioProjects\DIGI\app\src\main\AndroidManifest.xml
