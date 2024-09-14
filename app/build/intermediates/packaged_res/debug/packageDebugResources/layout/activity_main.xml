@@ -70,7 +70,8 @@
                     android:layout_marginTop="8dp"
                     android:ems="10"
                     android:hint="Código do Site"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:text="text_test"/>
 
                 <Button
                     android:id="@+id/btn_site_code_clear_main"

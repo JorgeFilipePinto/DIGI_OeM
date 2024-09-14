@@ -309,14 +309,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     void WhatsAppSend(String sms) {
-        /*Intent sendWhatsapp = new Intent();
+        Intent sendWhatsapp = new Intent();
         sendWhatsapp.putExtra(Intent.EXTRA_TEXT, sms);
         sendWhatsapp.setPackage("com.whatsapp");
         sendWhatsapp.setType("text/plain");
-        startActivity(sendWhatsapp);*/
+        startActivity(sendWhatsapp);
 
-        DataBase myDB = new DataBase(MainActivity.this);
-        myDB.addBook(teamCodeBox.getText().toString().trim(), siteCodeBox.getText().toString().trim());
     }
 
     void smsCopied(String sms) {
